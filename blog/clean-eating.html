@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Why Real Food Is the Best Thing You Can Do for Your Body | Baked with Love</title>
+  <meta name="description" content="We live in a world full of shortcuts. Here's why choosing real food is still the most powerful thing you can do for your health." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Cormorant+Garamond:ital,wght@1,300;0,400&family=Poppins:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #FAF6F0;
+      --blush: #F2E4D4;
+      --rose: #C9907A;
+      --deep-rose: #9E5E4A;
+      --brown: #5C3D2E;
+      --muted: #8C7060;
+      --border: rgba(92,61,46,0.12);
+      --radius: 12px;
+      --ease: 0.25s ease;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      background: var(--cream);
+      color: var(--brown);
+      line-height: 1.85;
+      font-size: 1.05rem;
+    }
+
+    /* ── Nav ── */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(250,246,240,0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.1rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .logo { text-decoration: none; display: inline-flex; flex-direction: column; line-height: 1; }
+    .logo-name {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 300;
+      font-style: normal;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--brown);
+      font-size: 1rem;
+    }
+    .logo-heart { color: var(--rose); }
+    .logo-sub {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-style: normal;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--deep-rose);
+      font-size: 0.5rem;
+      margin-top: 3px;
+    }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--brown);
+      font-style: normal;
+      transition: color var(--ease);
+    }
+    .nav-links a:hover { color: var(--rose); }
+
+    /* ── Post ── */
+    .post-hero {
+      background: linear-gradient(155deg, var(--cream) 0%, var(--blush) 100%);
+      padding: 5rem 2rem 4rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .post-cat {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 0.7rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--rose);
+      font-style: normal;
+      margin-bottom: 1rem;
+    }
+    .post-title {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 300;
+      font-size: clamp(1.75rem, 4vw, 2.75rem);
+      color: var(--brown);
+      letter-spacing: 0.04em;
+      line-height: 1.25;
+      max-width: 700px;
+      margin: 0 auto 1.25rem;
+    }
+    .post-meta {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 0.72rem;
+      letter-spacing: 0.14em;
+      color: var(--muted);
+      font-style: normal;
+    }
+    .post-meta span { color: var(--rose); }
+
+    .post-body {
+      max-width: 700px;
+      margin: 0 auto;
+      padding: 4rem 2rem 5rem;
+    }
+
+    .post-body p {
+      font-size: 1.12rem;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--brown);
+      margin-bottom: 1.5rem;
+      line-height: 1.9;
+    }
+
+    .post-body h2 {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 300;
+      font-size: 1.3rem;
+      letter-spacing: 0.08em;
+      color: var(--brown);
+      margin: 2.5rem 0 1rem;
+    }
+
+    .post-body h3 {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 300;
+      font-size: 1rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--deep-rose);
+      margin: 2rem 0 0.75rem;
+    }
+
+    .divider {
+      width: 44px; height: 1px;
+      background: var(--rose);
+      margin: 2rem auto;
+    }
+
+    .pullquote {
+      border-left: 3px solid var(--rose);
+      margin: 2.5rem 0;
+      padding: 0.5rem 1.75rem;
+    }
+    .pullquote p {
+      font-size: 1.3rem !important;
+      color: var(--deep-rose) !important;
+      line-height: 1.7 !important;
+      margin-bottom: 0 !important;
+    }
+
+    .author-block {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+    }
+    .author-avatar {
+      width: 56px; height: 56px;
+      border-radius: 50%;
+      background: var(--blush);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.5rem;
+      border: 1px solid var(--border);
+      flex-shrink: 0;
+    }
+    .author-name {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 300;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--brown);
+    }
+    .author-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+      font-style: normal;
+      margin-top: 0.2rem;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 0.7rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--rose);
+      text-decoration: none;
+      font-style: normal;
+      margin-bottom: 3rem;
+      transition: color var(--ease);
+    }
+    .back-link:hover { color: var(--deep-rose); }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--brown);
+      padding: 3rem 2rem;
+      text-align: center;
+    }
+    .footer-logo-name {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 300;
+      font-style: normal;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--cream);
+      font-size: 1rem;
+    }
+    .footer-copy { font-size: 0.82rem; color: rgba(250,246,240,0.35); margin-top: 0.75rem; font-style: normal; }
+
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .post-body { padding: 3rem 1.25rem 4rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="../index.html" class="logo">
+        <div class="logo-name">BAKED WITH L<span class="logo-heart">♥</span>VE</div>
+        <div class="logo-sub">Home Bakery</div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="../index.html#menu">Menu</a></li>
+        <li><a href="../index.html#about">About</a></li>
+        <li><a href="../index.html#order">Order</a></li>
+        <li><a href="../index.html#contact">Contact</a></li>
+        <li><a href="../index.html#blog">Blog</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Post Hero -->
+  <div class="post-hero">
+    <p class="post-cat">Clean Eating</p>
+    <h1 class="post-title">Why Real Food Is the Best Thing You Can Do for Your Body</h1>
+    <p class="post-meta">By <span>Elizabeth Nerbun</span> &nbsp;&middot;&nbsp; May 2026</p>
+  </div>
+
+  <!-- Post Body -->
+  <article class="post-body">
+
+    <a href="../index.html#blog" class="back-link">&#8592; Back to Blogs</a>
+
+    <p>We live in a world that has made food incredibly convenient — and incredibly complicated. Grocery store shelves are stocked with products that have ingredient lists longer than a paragraph, and the phrase "all natural" has become so overused it means almost nothing. In the middle of all of that noise, I keep coming back to one simple truth: real food is still the best thing you can do for your body.</p>
+
+    <p>I'm not talking about a diet trend. I'm not here to sell you a cleanse or tell you that one specific food group is the enemy. I'm talking about something much more basic: choosing food that is actually food. Whole ingredients. Things your grandmother would recognize. Food that came from the ground, a tree, an animal — not a manufacturing facility.</p>
+
+    <div class="divider"></div>
+
+    <h2>What "Real Food" Actually Means</h2>
+
+    <p>Real food doesn't need a label that tells you it's healthy. A carrot is a carrot. An egg is an egg. Butter made from cream is butter. When you pick up a package and you can picture every single ingredient on the list growing, grazing, or being harvested somewhere — that's real food.</p>
+
+    <p>The opposite of that is ultra-processed food: products engineered in labs with stabilizers, emulsifiers, artificial flavors, and preservatives designed to extend shelf life and trigger your brain's reward centers. These aren't inherently evil, but they're not nourishing you in the same way a bowl of oatmeal with fresh fruit is.</p>
+
+    <div class="pullquote">
+      <p>When you pick up a package and can picture every ingredient growing or being harvested somewhere — that's real food.</p>
+    </div>
+
+    <h2>What Your Body Does with Real Food</h2>
+
+    <p>Your body is remarkably good at processing whole foods. It knows what to do with a handful of almonds. It knows how to extract nutrition from a sweet potato. It knows how to use the fat in a piece of wild salmon. These foods contain fiber, vitamins, minerals, and phytonutrients that work together in ways science is still discovering.</p>
+
+    <p>Ultra-processed foods, on the other hand, have been stripped of much of that complexity. The fiber is often gone. The natural vitamins are sometimes added back in synthetic form. The calorie density goes up while the nutritional value goes down. Your body can run on this fuel, but it's a bit like filling a finely tuned engine with the cheapest gas you can find — it'll keep running, but not the way it was designed to.</p>
+
+    <h3>Digestion and Gut Health</h3>
+
+    <p>One of the clearest places you feel the difference is in your gut. Real foods — especially fruits, vegetables, legumes, and whole grains — feed the beneficial bacteria in your digestive system. A healthy gut microbiome is connected to everything from your immune function to your mood. When you eat a diet high in processed ingredients, those bacterial communities can shift in ways that researchers are increasingly linking to inflammation, fatigue, and even anxiety.</p>
+
+    <h3>Energy and Blood Sugar</h3>
+
+    <p>Whole foods tend to keep your blood sugar more stable. Fiber and protein slow down the absorption of sugar, which means you get steady energy instead of the spike-and-crash cycle that often follows a highly processed meal. If you've ever eaten a big fast food lunch and felt sluggish an hour later, you've experienced this firsthand.</p>
+
+    <h3>Long-Term Health</h3>
+
+    <p>The research here is consistent and has been for decades. Diets built around whole, minimally processed foods are associated with lower rates of heart disease, type 2 diabetes, certain cancers, and obesity. That doesn't mean a cookie or a bag of chips will hurt you — it means that the pattern of what you eat over years and decades shapes your health in very real ways.</p>
+
+    <div class="divider"></div>
+
+    <h2>You Don't Have to Be Perfect</h2>
+
+    <p>Here's where I want to be honest with you: I bake cookies. Beautiful, delicious, made-with-real-butter cookies. I'm not here to tell you that treats are off the table. What I am here to say is that even your treats can be made with better ingredients.</p>
+
+    <p>That's the whole reason I started using organic ingredients in everything I bake. Not because it makes the cookies magic, but because it's one small way to choose better at every step. Organic flour without pesticide residues. Real butter from cows that ate grass. Eggs from hens that lived the way hens are supposed to live. It's not perfection — it's just a little more care.</p>
+
+    <p>And that's really what eating real food comes down to. Not a rigid set of rules, but a general direction. More whole, more recognizable, more honest. Your body will notice, even if you don't keep score.</p>
+
+    <div class="divider"></div>
+
+    <p>If you're curious about what goes into the things we bake — from ingredient sourcing to gluten-free and dairy-free options — feel free to reach out. We love talking food almost as much as we love making it.</p>
+
+    <div class="author-block">
+      <div class="author-avatar">👩‍🍳</div>
+      <div>
+        <div class="author-name">Elizabeth Nerbun</div>
+        <div class="author-title">Home Baker &middot; Baked with Love &middot; Rockwall, TX</div>
+      </div>
+    </div>
+
+    <br>
+    <a href="../index.html#blog" class="back-link">&#8592; Back to Blogs</a>
+
+  </article>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo-name">BAKED WITH L<span style="color:var(--rose);">♥</span>VE</div>
+    <p class="footer-copy">&copy; 2026 Baked with Love &middot; Elizabeth Nerbun &middot; Rockwall, TX</p>
+  </footer>
+
+</body>
+</html>

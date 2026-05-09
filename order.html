@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Place an Order | Baked with Love · Rockwall, TX</title>
+  <meta name="description" content="Order fresh-baked cookies and more from Baked with Love in Rockwall, TX. All organic ingredients. Gluten-free and dairy-free options available." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&family=Cormorant+Garamond:ital,wght@1,300&family=Poppins:wght@300;400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream: #FAF6F0;
+      --blush: #F2E4D4;
+      --rose: #C9907A;
+      --deep-rose: #9E5E4A;
+      --brown: #5C3D2E;
+      --muted: #8C7060;
+      --border: rgba(92,61,46,0.12);
+      --radius: 12px;
+      --shadow: 0 4px 20px rgba(92,61,46,0.08);
+      --ease: 0.25s ease;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-style: italic;
+      font-weight: 300;
+      background: var(--cream);
+      color: var(--brown);
+      line-height: 1.8;
+      font-size: 1.05rem;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 300;
+      font-style: normal;
+      letter-spacing: 0.06em;
+      line-height: 1.2;
+    }
+
+    /* ── Layout ── */
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 2rem; }
+    .section { padding: 5rem 0; }
+
+    .section-eyebrow {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 0.7rem;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--rose);
+      font-style: normal;
+      margin-bottom: 0.6rem;
+    }
+    .section-heading { font-size: 2.25rem; color: var(--brown); margin-bottom: 0.75rem; }
+    .section-sub { font-size: 1.05rem; color: var(--muted); max-width: 540px; }
+    .section-header { margin-bottom: 3rem; }
+
+    .divider {
+      width: 44px; height: 1px;
+      background: var(--rose);
+      margin: 1.25rem 0;
+    }
+
+    /* ── Logo ── */
+    .logo { text-decoration: none; display: inline-flex; flex-direction: column; line-height: 1; }
+    .logo-name {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 300;
+      font-style: normal;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--brown);
+    }
+    .logo-heart { color: var(--rose); }
+    .logo-sub {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-style: normal;
+      letter-spacing: 0.32em;
+      text-transform: uppercase;
+      color: var(--deep-rose);
+      margin-top: 3px;
+    }
+
+    /* ── Nav ── */
+    .nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(250,246,240,0.96);
+      backdrop-filter: blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.1rem 2rem;
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+    .nav-inner .logo-name { font-size: 1rem; }
+    .nav-inner .logo-sub { font-size: 0.5rem; }
+
+    .nav-links { display: flex; gap: 2.25rem; list-style: none; }
+    .nav-links a {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 0.72rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      text-decoration: none;
+      color: var(--brown);
+      font-style: normal;
+      transition: color var(--ease);
+    }
+    .nav-links a:hover { color: var(--rose); }
+    .nav-links a.active { color: var(--rose); }
+
+    /* ── Page header ── */
+    .page-header {
+      background: linear-gradient(155deg, var(--cream) 0%, #f5e6d8 60%, var(--blush) 100%);
+      padding: 4rem 2rem 3.5rem;
+      text-align: center;
+      border-bottom: 1px solid var(--border);
+    }
+    .page-header .section-eyebrow { margin-bottom: 0.5rem; }
+    .page-header h1 { font-size: 2.5rem; color: var(--brown); margin-bottom: 0.75rem; }
+    .page-header p { font-size: 1.05rem; color: var(--muted); }
+    .page-header .divider { margin: 1.25rem auto; }
+
+    /* ── Order layout ── */
+    .order-inner {
+      display: grid;
+      grid-template-columns: 1.6fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    /* ── Form wrapper ── */
+    .order-form-wrapper {
+      border-radius: var(--radius);
+      overflow: hidden;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow);
+      background: #fff;
+    }
+    .order-form-wrapper iframe {
+      display: block;
+      width: 100%;
+      border: none;
+    }
+
+    /* ── Payment card ── */
+    .payment-card {
+      background: #fff;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 2rem;
+      box-shadow: var(--shadow);
+    }
+    .payment-card-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 0.68rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--rose);
+      font-style: normal;
+      margin-bottom: 1.5rem;
+    }
+    .pay-method { padding-bottom: 1.25rem; margin-bottom: 1.25rem; border-bottom: 1px solid var(--border); }
+    .pay-method:last-child { padding-bottom: 0; margin-bottom: 0; border-bottom: none; }
+    .pay-method-name {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 300;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--brown);
+      margin-bottom: 0.3rem;
+    }
+    .pay-method-detail { font-size: 0.95rem; color: var(--muted); }
+    .pay-method-sub { font-size: 0.82rem; color: var(--muted); margin-top: 0.15rem; }
+    .order-note {
+      margin-top: 1.5rem;
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    /* ── Info card ── */
+    .info-card {
+      background: var(--blush);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      padding: 1.75rem 2rem;
+      margin-top: 1.5rem;
+    }
+    .info-card-title {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 0.65rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--deep-rose);
+      font-style: normal;
+      margin-bottom: 1rem;
+    }
+    .info-card p { font-size: 0.92rem; color: var(--brown); line-height: 1.7; }
+    .info-card p + p { margin-top: 0.75rem; }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--brown);
+      padding: 3.5rem 2rem;
+      text-align: center;
+    }
+    .footer-logo { margin-bottom: 1.5rem; }
+    .footer-logo .logo-name { font-size: 1rem; color: var(--cream); }
+    .footer-logo .logo-sub { color: rgba(250,246,240,0.45); font-size: 0.5rem; }
+    .footer-logo .logo-heart { color: var(--rose); }
+    .footer-links {
+      display: flex; justify-content: center; gap: 2rem;
+      list-style: none;
+      margin: 1.5rem 0;
+    }
+    .footer-links a {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 300;
+      font-size: 0.68rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(250,246,240,0.5);
+      text-decoration: none;
+      font-style: normal;
+      transition: color var(--ease);
+    }
+    .footer-links a:hover { color: var(--rose); }
+    .footer-copy { font-size: 0.82rem; color: rgba(250,246,240,0.35); margin-top: 0.5rem; }
+    .footer-tagline { font-size: 0.95rem; color: rgba(250,246,240,0.55); }
+
+    /* ── Responsive ── */
+    @media (max-width: 820px) {
+      .order-inner { grid-template-columns: 1fr; }
+      .order-inner > div { order: -1; }
+    }
+    @media (max-width: 640px) {
+      .nav-links { display: none; }
+      .page-header h1 { font-size: 1.75rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="index.html" class="logo">
+        <div class="logo-name">BAKED WITH L<span class="logo-heart">♥</span>VE</div>
+        <div class="logo-sub">Home Bakery</div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html#menu">Menu</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="order.html" class="active">Order</a></li>
+        <li><a href="index.html#contact">Contact</a></li>
+        <li><a href="index.html#blog">Blog</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <p class="section-eyebrow">Place an Order</p>
+    <h1>Let's Get Baking</h1>
+    <div class="divider"></div>
+    <p>Fill out the form below and Elizabeth will confirm your order within 24 hours. Please allow 24–48 hours notice.</p>
+  </div>
+
+  <!-- Order Section -->
+  <section class="section">
+    <div class="container">
+      <div class="order-inner">
+
+        <div class="order-form-wrapper">
+          <iframe
+            src="https://docs.google.com/forms/d/e/1FAIpQLSdmBnkLl2XR9ZGPOhOiv9UYXedMv8moRVBsIZ3N_avwL-q_0g/viewform?embedded=true"
+            height="1605"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+          >Loading…</iframe>
+        </div>
+
+        <div>
+          <div class="payment-card">
+            <div class="payment-card-title">Payment</div>
+            <div class="pay-method">
+              <div class="pay-method-name">Zelle</div>
+              <div class="pay-method-detail">Elizabeth Nerbun</div>
+            </div>
+            <div class="pay-method">
+              <div class="pay-method-name">Venmo</div>
+              <div class="pay-method-detail">@Patrick-Nerbun</div>
+              <div class="pay-method-sub">Last 4 digits: 7332</div>
+            </div>
+          </div>
+          <p class="order-note">Payment is required at the time of order. Elizabeth confirms within 24 hours. Please allow 24–48 hours notice when placing your order.</p>
+
+          <div class="info-card">
+            <div class="info-card-title">Delivery Info</div>
+            <p>Flat <strong>$5 delivery fee</strong> within 5 miles of Lakeview Summit. Delivery fees may be waived for large orders — contact Elizabeth for details.</p>
+            <p>Pickup is always free. A bake stand will be set up soon for easy pickup.</p>
+          </div>
+
+          <div class="info-card" style="margin-top: 1rem;">
+            <div class="info-card-title">Questions?</div>
+            <p>Reach Elizabeth by phone or text at <strong>(262) 366-4414</strong>, or email <strong>elizabethnerbun@gmail.com</strong>.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-logo logo">
+      <div class="logo-name">BAKED WITH L<span class="logo-heart">♥</span>VE</div>
+      <div class="logo-sub">Home Bakery</div>
+    </div>
+    <ul class="footer-links">
+      <li><a href="index.html#menu">Menu</a></li>
+      <li><a href="order.html">Order</a></li>
+      <li><a href="index.html#contact">Contact</a></li>
+      <li><a href="index.html#blog">Blog</a></li>
+    </ul>
+    <p class="footer-tagline">Made with love, baked with care.</p>
+    <p class="footer-copy">&copy; 2026 Baked with Love &middot; Elizabeth Nerbun &middot; Rockwall, TX</p>
+  </footer>
+
+</body>
+</html>
