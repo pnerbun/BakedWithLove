@@ -66,22 +66,34 @@ PALETTES = {
 # ---------------------------------------------------------------------------
 MENU_ITEMS = [
     {
-        "name":  "Classic Chocolate Chip",
-        "desc":  "Gluten-free · a homemade favorite",
-        "size":  "Single cookie",
+        "name":  "Cookie — Single",
+        "desc":  "Gluten-free · choc chip or peanut butter",
+        "size":  "1 fresh-baked cookie",
         "price": "$4",
     },
     {
-        "name":  "Jumbo Chocolate Chip — Pack of 2",
-        "desc":  "Gluten-free · oversized & shareable",
+        "name":  "Cookie — Bag of 2 Jumbo",
+        "desc":  "Gluten-free · your choice of flavor",
         "size":  "2 jumbo cookies",
         "price": "$10",
     },
     {
-        "name":  "Jumbo Chocolate Chip — Box of 4",
-        "desc":  "Gluten-free · perfect for gifts & gatherings",
+        "name":  "Cookie — Box of 4 Jumbo",
+        "desc":  "Gluten-free · gift-ready",
         "size":  "4 jumbo cookies",
         "price": "$20",
+    },
+    {
+        "name":  "Gluten Free Bread",
+        "desc":  "Wholesome loaves baked fresh",
+        "size":  "Full loaf",
+        "price": "$12",
+    },
+    {
+        "name":  "Multi-Veggie Protein Waffles",
+        "desc":  "To order or frozen  ·  +$2 w/ extra protein",
+        "size":  "Large round waffle",
+        "price": "$5",
     },
 ]
 
@@ -319,13 +331,13 @@ def design_1_classic(c):
     )
 
     # Divider
-    draw_divider_line(c, PAGE_W / 2.0, logo_bottom - 14,
+    draw_divider_line(c, PAGE_W / 2.0, logo_bottom - 12,
                       width=44, color=p["accent"], weight=0.7)
 
     # Section heading
     draw_letterspaced_centered(
-        c, "OUR COOKIES",
-        PAGE_W / 2.0, logo_bottom - 44,
+        c, "OUR MENU",
+        PAGE_W / 2.0, logo_bottom - 38,
         "Helvetica", 16, 1.6, p["body"],
     )
 
@@ -334,11 +346,11 @@ def design_1_classic(c):
     c.setFillColor(p["muted"])
     flavor = "all gluten-free · baked fresh"
     fw = stringWidth(flavor, "Helvetica-Oblique", 9.5)
-    c.drawString((PAGE_W - fw) / 2.0, logo_bottom - 60, flavor)
+    c.drawString((PAGE_W - fw) / 2.0, logo_bottom - 53, flavor)
 
     # Menu items
-    item_top_y = logo_bottom - 100
-    row_height = 58
+    item_top_y = logo_bottom - 74
+    row_height = 44
     margin_x = 0.55 * inch
 
     for i, item in enumerate(MENU_ITEMS):
@@ -346,9 +358,9 @@ def design_1_classic(c):
 
         # Item name (left)
         name_caps = item["name"].upper()
-        name_w = letterspaced_width(name_caps, "Helvetica", 11, 0.6)
+        name_w = letterspaced_width(name_caps, "Helvetica", 10, 0.5)
         draw_letterspaced(c, name_caps, margin_x, y,
-                          "Helvetica", 11, 0.6, p["body"])
+                          "Helvetica", 10, 0.5, p["body"])
 
         # Price (right)
         c.setFont("Helvetica", 13)
@@ -369,27 +381,27 @@ def design_1_classic(c):
         )
 
         # Description
-        c.setFont("Helvetica-Oblique", 8.5)
+        c.setFont("Helvetica-Oblique", 8)
         c.setFillColor(p["muted"])
-        c.drawString(margin_x, y - 13, item["desc"])
+        c.drawString(margin_x, y - 12, item["desc"])
 
     # Payment block
-    draw_payment_block(c, p, cy_top=2.05 * inch,
-                       divider_width=160, row_gap=15)
+    draw_payment_block(c, p, cy_top=1.62 * inch,
+                       divider_width=160, row_gap=13)
 
     # Bottom note
     c.setFont("Helvetica-Oblique", 8)
     c.setFillColor(p["deep"])
     note = "dairy-free options available on request"
     nw = stringWidth(note, "Helvetica-Oblique", 8)
-    c.drawString((PAGE_W - nw) / 2.0, 0.95 * inch, note)
+    c.drawString((PAGE_W - nw) / 2.0, 0.82 * inch, note)
 
     # Mini divider
-    draw_divider_line(c, PAGE_W / 2.0, 0.80 * inch,
+    draw_divider_line(c, PAGE_W / 2.0, 0.68 * inch,
                       width=30, color=p["accent"], weight=0.5)
 
     # Footer
-    draw_footer(c, p, y=0.55 * inch)
+    draw_footer(c, p, y=0.44 * inch)
 
     c.showPage()
 
@@ -419,45 +431,45 @@ def design_2_stacked(c):
         draw_heart(c, PAGE_W / 2.0 + off, heart_y, 0.35, p["accent"])
 
     # Items stacked
-    block_top = heart_y - 26
-    block_height = 78
+    block_top = heart_y - 20
+    block_height = 50
 
     for i, item in enumerate(MENU_ITEMS):
         cy = block_top - i * block_height
 
-        # Price — bold and large
-        c.setFont("Helvetica-Bold", 26)
+        # Price — prominent
+        c.setFont("Helvetica-Bold", 18)
         c.setFillColor(p["accent"])
-        pw = stringWidth(item["price"], "Helvetica-Bold", 26)
+        pw = stringWidth(item["price"], "Helvetica-Bold", 18)
         c.drawString((PAGE_W - pw) / 2.0, cy, item["price"])
 
         # Item name
         draw_letterspaced_centered(
             c, item["name"].upper(),
-            PAGE_W / 2.0, cy - 18,
-            "Helvetica", 10, 1.3, p["body"],
+            PAGE_W / 2.0, cy - 13,
+            "Helvetica", 9.5, 1.1, p["body"],
         )
 
         # Description
-        c.setFont("Helvetica-Oblique", 8.5)
+        c.setFont("Helvetica-Oblique", 8)
         c.setFillColor(p["muted"])
-        dw = stringWidth(item["desc"], "Helvetica-Oblique", 8.5)
-        c.drawString((PAGE_W - dw) / 2.0, cy - 32, item["desc"])
+        dw = stringWidth(item["desc"], "Helvetica-Oblique", 8)
+        c.drawString((PAGE_W - dw) / 2.0, cy - 25, item["desc"])
 
         # Mini divider
         if i < len(MENU_ITEMS) - 1:
             draw_divider_line(
-                c, PAGE_W / 2.0, cy - 46,
+                c, PAGE_W / 2.0, cy - 37,
                 width=24, color=p["accent"], weight=0.5,
             )
 
     # Payment block — sits between items and footer
     last_cy = block_top - (len(MENU_ITEMS) - 1) * block_height
-    draw_payment_block(c, p, cy_top=last_cy - 66,
-                       divider_width=170, row_gap=13)
+    draw_payment_block(c, p, cy_top=last_cy - 46,
+                       divider_width=170, row_gap=12)
 
     # Footer
-    draw_footer(c, p, y=0.55 * inch)
+    draw_footer(c, p, y=0.48 * inch)
 
     c.showPage()
 
@@ -494,19 +506,19 @@ def design_3_framed(c):
     # Eyebrow
     draw_letterspaced_centered(
         c, "MENU",
-        PAGE_W / 2.0, PAGE_H - 0.85 * inch,
+        PAGE_W / 2.0, PAGE_H - 0.78 * inch,
         "Helvetica", 6.5, 3.0, p["deep"],
     )
 
     # Logo
     logo_bottom = draw_logo(
-        c, cx=PAGE_W / 2.0, cy_top=PAGE_H - 1.20 * inch,
+        c, cx=PAGE_W / 2.0, cy_top=PAGE_H - 1.12 * inch,
         palette=p, title_size=20, title_spacing=2.0,
         sub_size=7.5, sub_spacing=2.8,
     )
 
     # Ornamental divider — line + heart + line
-    div_y = logo_bottom - 18
+    div_y = logo_bottom - 15
     seg = 60
     c.setStrokeColor(p["accent"])
     c.setLineWidth(0.6)
@@ -515,15 +527,15 @@ def design_3_framed(c):
     draw_heart(c, PAGE_W / 2.0, div_y + 1, 0.35, p["accent"])
 
     # Tagline
-    c.setFont("Helvetica-Oblique", 9.5)
+    c.setFont("Helvetica-Oblique", 9)
     c.setFillColor(p["muted"])
     tag = "all gluten-free · baked fresh from our kitchen"
-    tw = stringWidth(tag, "Helvetica-Oblique", 9.5)
-    c.drawString((PAGE_W - tw) / 2.0, div_y - 18, tag)
+    tw = stringWidth(tag, "Helvetica-Oblique", 9)
+    c.drawString((PAGE_W - tw) / 2.0, div_y - 14, tag)
 
     # Items
-    items_top = div_y - 50
-    row_h = 70
+    items_top = div_y - 38
+    row_h = 44
 
     for i, item in enumerate(MENU_ITEMS):
         cy = items_top - i * row_h
@@ -532,55 +544,63 @@ def design_3_framed(c):
         draw_letterspaced_centered(
             c, item["name"].upper(),
             PAGE_W / 2.0, cy,
-            "Helvetica", 10.5, 1.4, p["body"],
+            "Helvetica", 10, 1.2, p["body"],
         )
 
         # Italic size descriptor
-        c.setFont("Helvetica-Oblique", 8.5)
+        c.setFont("Helvetica-Oblique", 8)
         c.setFillColor(p["muted"])
-        sw = stringWidth(item["size"], "Helvetica-Oblique", 8.5)
-        c.drawString((PAGE_W - sw) / 2.0, cy - 13, item["size"])
+        sw = stringWidth(item["size"], "Helvetica-Oblique", 8)
+        c.drawString((PAGE_W - sw) / 2.0, cy - 11, item["size"])
 
         # Price
-        c.setFont("Helvetica", 16)
+        c.setFont("Helvetica", 14)
         c.setFillColor(p["accent"])
-        pw = stringWidth(item["price"], "Helvetica", 16)
-        c.drawString((PAGE_W - pw) / 2.0, cy - 33, item["price"])
+        pw = stringWidth(item["price"], "Helvetica", 14)
+        c.drawString((PAGE_W - pw) / 2.0, cy - 24, item["price"])
 
         # Tiny separator
         if i < len(MENU_ITEMS) - 1:
-            draw_divider_line(c, PAGE_W / 2.0, cy - 50,
+            draw_divider_line(c, PAGE_W / 2.0, cy - 36,
                               width=18, color=p["accent"], weight=0.4)
 
     # Payment block
     last_cy = items_top - (len(MENU_ITEMS) - 1) * row_h
-    draw_payment_block(c, p, cy_top=last_cy - 56,
-                       divider_width=160, row_gap=14)
+    draw_payment_block(c, p, cy_top=last_cy - 44,
+                       divider_width=160, row_gap=13)
 
     # Footer
-    draw_footer(c, p, y=0.65 * inch)
+    draw_footer(c, p, y=0.60 * inch)
 
     c.showPage()
 
 
 # ---------------------------------------------------------------------------
-# Build the PDF
+# Build the PDFs
 # ---------------------------------------------------------------------------
 def build():
+    # 3-design combined PDF
     c = canvas.Canvas(OUTPUT, pagesize=(PAGE_W, PAGE_H))
     c.setTitle("Baked with Love — 5x7 Menu (3 designs)")
     c.setAuthor("Baked with Love")
-
     design_1_classic(c)
     design_2_stacked(c)
     design_3_framed(c)
-
     c.save()
     print(f"Saved: {OUTPUT}")
     print("Pages:")
     print("  1. Classic Elegant   — Website Palette")
     print("  2. Stacked Highlight — Warm Rose Palette")
     print("  3. Framed Card       — Terracotta Palette")
+
+    # Single-page terracotta export used by the website
+    framed_out = "baked_with_love_menu_framed_terracotta.pdf"
+    cf = canvas.Canvas(framed_out, pagesize=(PAGE_W, PAGE_H))
+    cf.setTitle("Baked with Love — Menu")
+    cf.setAuthor("Baked with Love")
+    design_3_framed(cf)
+    cf.save()
+    print(f"Saved: {framed_out}")
 
 
 if __name__ == "__main__":
