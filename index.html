@@ -268,6 +268,34 @@
       margin-bottom: 0.3rem;
       font-style: normal;
     }
+    .menu-category {
+      font-family: 'Josefin Sans', sans-serif;
+      font-weight: 300;
+      font-size: 1.05rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--deep-rose);
+      margin: 3.25rem 0 1.25rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border);
+    }
+    .menu-category:first-of-type { margin-top: 0; }
+    .menu-category-note {
+      font-style: italic;
+      font-size: 1rem;
+      color: var(--muted);
+      margin: -0.6rem 0 1.5rem;
+      max-width: 620px;
+    }
+    .menu-card-price {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      font-style: normal;
+      font-size: 0.8rem;
+      letter-spacing: 0.03em;
+      color: var(--rose);
+      margin-bottom: 0.75rem;
+    }
     .menu-card.coming-soon { opacity: 0.5; }
     .cs-badge {
       display: inline-block;
@@ -555,7 +583,7 @@
         <p class="hero-location">Serving Lakeview Summit &middot; The Shores &middot; North Rockwall</p>
         <div class="hero-ctas">
           <a href="order.html" class="btn btn-primary">Order Now</a>
-          <a href="baked_with_love_menu_framed_terracotta.pdf" class="btn btn-outline">See the Menu</a>
+          <a href="#menu" class="btn btn-outline">See the Menu</a>
         </div>
       </div>
     </div>
@@ -570,64 +598,292 @@
         <div class="divider"></div>
         <p class="section-sub">All items are gluten-free. Dairy-free options available upon request.</p>
       </div>
+
+      <!-- Kids' Treats -->
+      <h3 class="menu-category">Kids' Treats</h3>
+      <p class="menu-category-note">Wholesome, veggie-packed snacks made with organic ingredients — treats parents can feel good about and kids actually ask for.</p>
       <div class="menu-grid">
 
         <div class="menu-card">
           <div class="menu-card-img" style="padding: 0; overflow: hidden;">
-            <img src="Photos/IMG-0211.jpeg" alt="Gluten-Free Chocolate Chip Cookies" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-name">Gluten-Free Chocolate Chip Cookies</div>
-            <p class="menu-card-desc">Our signature cookie — rich, chewy, and baked fresh to order. Gluten-free, with dairy-free options available.</p>
-            <span class="tag">Gluten-Free</span>
-            <span class="tag">DF Option</span>
-            <span class="tag">Bag of 2</span>
-            <span class="tag">Box of 4</span>
-          </div>
-        </div>
-
-        <div class="menu-card">
-          <div class="menu-card-img" style="padding: 0; overflow: hidden;">
-            <img src="Photos/20260518_194530.jpg" alt="Gluten Free Peanut Butter Cookies" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-name">Gluten Free Peanut Butter Cookies</div>
-            <p class="menu-card-desc">Rich, chewy peanut butter cookies baked fresh to order — gluten-free with dairy-free options available.</p>
-            <span class="tag">Gluten-Free</span>
-            <span class="tag">DF Option</span>
-            <span class="tag">Bag of 2</span>
-            <span class="tag">Box of 4</span>
-          </div>
-        </div>
-
-        <div class="menu-card">
-          <div class="menu-card-img" style="padding: 0; overflow: hidden;">
-            <img src="Photos/bread_cropped.jpg" alt="Gluten Free Bread" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
-          </div>
-          <div class="menu-card-body">
-            <div class="menu-card-name">Gluten Free Bread</div>
-            <p class="menu-card-desc">Wholesome, hearty loaves baked with care — always gluten-free. Now available.</p>
-            <span class="tag">Gluten-Free</span>
-            <span class="tag">DF Option</span>
-            <span class="tag">$12 / Loaf</span>
-          </div>
-        </div>
-
-        <div class="menu-card">
-          <div class="menu-card-img" style="padding: 0; overflow: hidden;">
-            <img src="Photos/IMG-0330.jpeg" alt="Multi-Veggie Protein Waffles" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+            <img src="Photos/IMG-0330.jpeg" alt="Multi-veggie protein waffles" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
           </div>
           <div class="menu-card-body">
             <div class="menu-card-name">Multi-Veggie Protein Waffles</div>
-            <p class="menu-card-desc">Our kids eat these every morning — packed with veggies and protein. Cooked to order or frozen. Extra protein available.</p>
+            <p class="menu-card-desc">Our kids eat these every morning — packed with veggies and protein. Cooked to order or frozen.</p>
+            <div class="menu-card-price">$30 half-dozen &middot; +$5 extra protein</div>
             <span class="tag">Gluten-Free</span>
-            <span class="tag">$5 / Waffle</span>
-            <span class="tag">+$2 Extra Protein</span>
             <span class="tag">Frozen Available</span>
           </div>
         </div>
 
+        <div class="menu-card">
+          <div class="menu-card-img" style="padding: 0; overflow: hidden;">
+            <img src="Photos/placeholder_veggie_muffins.jpg" alt="Hidden-veggie zucchini carrot muffins" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-name">Hidden-Veggie Muffins</div>
+            <p class="menu-card-desc">Zucchini and carrot baked right in — sneaky-healthy muffins kids love.</p>
+            <div class="menu-card-price">$22 half-dozen</div>
+            <span class="tag">Gluten-Free</span>
+            <span class="tag">Veggie-Packed</span>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-card-img" style="padding: 0; overflow: hidden;">
+            <img src="Photos/placeholder_energy_bites.jpg" alt="No-bake oat energy bites" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-name">No-Bake Energy Bites</div>
+            <p class="menu-card-desc">Oats, peanut butter, and a touch of honey rolled into a poppable snack.</p>
+            <div class="menu-card-price">$9 / dozen</div>
+            <span class="tag">Gluten-Free</span>
+            <span class="tag">DF Option</span>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-card-img" style="padding: 0; overflow: hidden;">
+            <img src="Photos/placeholder_breakfast_cookies.jpg" alt="Banana oat breakfast cookies" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-name">Banana Oat Breakfast Cookies</div>
+            <p class="menu-card-desc">Naturally sweetened with banana and hearty oats — a cookie you can feel good about for breakfast.</p>
+            <div class="menu-card-price">$10 / bag of 4</div>
+            <span class="tag">Gluten-Free</span>
+            <span class="tag">DF Option</span>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-card-img" style="padding: 0; overflow: hidden;">
+            <img src="Photos/placeholder_granola_bars.jpg" alt="Gluten-free granola snack bars" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-name">Granola &amp; Snack Bars</div>
+            <p class="menu-card-desc">Chewy oat-and-seed bars, honey-sweetened. A lunchbox favorite.</p>
+            <div class="menu-card-price">$15 / half-dozen</div>
+            <span class="tag">Gluten-Free</span>
+            <span class="tag">DF Option</span>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-card-img" style="padding: 0; overflow: hidden;">
+            <img src="Photos/placeholder_oatmeal_cups.jpg" alt="Apple-cinnamon baked oatmeal cups" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-name">Baked Oatmeal Cups</div>
+            <p class="menu-card-desc">Apple-cinnamon baked oatmeal cups — a warm, grab-and-go breakfast.</p>
+            <div class="menu-card-price">$22 half-dozen</div>
+            <span class="tag">Gluten-Free</span>
+            <span class="tag">DF Option</span>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-card-img" style="padding: 0; overflow: hidden;">
+            <img src="Photos/placeholder_veggie_bites.jpg" alt="Baked savory veggie bites" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-name">Savory Veggie Bites</div>
+            <p class="menu-card-desc">Baked zucchini and sweet potato bites — a savory, veggie-forward finger food for little ones.</p>
+            <div class="menu-card-price">$10 / dozen</div>
+            <span class="tag">Gluten-Free</span>
+            <span class="tag">Veggie-Packed</span>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-card-img" style="padding: 0; overflow: hidden;">
+            <img src="Photos/placeholder_seed_crackers.jpg" alt="Gluten-free seed crackers" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-name">GF Seed Crackers</div>
+            <p class="menu-card-desc">Crunchy almond-flax-oat crackers — great for snacking and dipping.</p>
+            <div class="menu-card-price">$7 / bag</div>
+            <span class="tag">Gluten-Free</span>
+            <span class="tag">DF Option</span>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-card-img" style="padding: 0; overflow: hidden;">
+            <img src="Photos/placeholder_apple_chips.jpg" alt="Baked apple chips" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-name">Baked Apple Chips</div>
+            <p class="menu-card-desc">Lightly cinnamon-dusted baked apple slices. One ingredient, no dyes, all crunch.</p>
+            <div class="menu-card-price">$6 / bag</div>
+            <span class="tag">Gluten-Free</span>
+            <span class="tag">No Added Sugar</span>
+          </div>
+        </div>
+
       </div>
+
+      <!-- Cookies -->
+      <h3 class="menu-category">Cookies</h3>
+      <div class="menu-grid">
+
+        <div class="menu-card">
+          <div class="menu-card-img" style="padding: 0; overflow: hidden;">
+            <img src="Photos/IMG-0211.jpeg" alt="Gluten-free chocolate chip cookies" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-name">Chocolate Chip Cookies</div>
+            <p class="menu-card-desc">Our signature cookie — rich, chewy, and baked fresh to order.</p>
+            <div class="menu-card-price">$4 each &middot; $10 bag of 2 &middot; $20 box of 4</div>
+            <span class="tag">Gluten-Free</span>
+            <span class="tag">DF Option</span>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-card-img" style="padding: 0; overflow: hidden;">
+            <img src="Photos/20260518_194530.jpg" alt="Gluten-free peanut butter cookies" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-name">Peanut Butter Cookies</div>
+            <p class="menu-card-desc">Rich, chewy peanut butter cookies baked fresh to order.</p>
+            <div class="menu-card-price">$4 each &middot; $10 bag of 2 &middot; $20 box of 4</div>
+            <span class="tag">Gluten-Free</span>
+            <span class="tag">DF Option</span>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-card-img" style="padding: 0; overflow: hidden;">
+            <img src="Photos/placeholder_sugar_cookies.jpg" alt="Gluten-free sugar cookies" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-name">Sugar Cookies</div>
+            <p class="menu-card-desc">Soft, buttery classic sugar cookies — simple and sweet, just the way kids love them.</p>
+            <div class="menu-card-price">$4 each &middot; $10 bag of 2 &middot; $20 box of 4</div>
+            <span class="tag">Gluten-Free</span>
+            <span class="tag">DF Option</span>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-card-img" style="padding: 0; overflow: hidden;">
+            <img src="Photos/placeholder_oatmeal_cookies.jpg" alt="Gluten-free oatmeal cookies" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-name">Oatmeal Cookies</div>
+            <p class="menu-card-desc">Hearty oatmeal cookies made with certified gluten-free oats. Raisin or plain.</p>
+            <div class="menu-card-price">$4 each &middot; $10 bag of 2 &middot; $20 box of 4</div>
+            <span class="tag">Gluten-Free</span>
+            <span class="tag">DF Option</span>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-card-img" style="padding: 0; overflow: hidden;">
+            <img src="Photos/placeholder_snickerdoodles.jpg" alt="Gluten-free snickerdoodle cookies" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-name">Snickerdoodles</div>
+            <p class="menu-card-desc">Soft cinnamon-sugar snickerdoodles with that perfect little tang.</p>
+            <div class="menu-card-price">$4 each &middot; $10 bag of 2 &middot; $20 box of 4</div>
+            <span class="tag">Gluten-Free</span>
+            <span class="tag">DF Option</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Breads -->
+      <h3 class="menu-category">Breads</h3>
+      <div class="menu-grid">
+
+        <div class="menu-card">
+          <div class="menu-card-img" style="padding: 0; overflow: hidden;">
+            <img src="Photos/bread_cropped.jpg" alt="Gluten-free sandwich bread loaf" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-name">GF Sandwich Loaf</div>
+            <p class="menu-card-desc">Wholesome, hearty sandwich loaves baked fresh — always gluten-free.</p>
+            <div class="menu-card-price">$14 / loaf</div>
+            <span class="tag">Gluten-Free</span>
+            <span class="tag">DF Option</span>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-card-img" style="padding: 0; overflow: hidden;">
+            <img src="Photos/placeholder_banana_bread.jpg" alt="Gluten-free banana bread" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-name">Banana Bread</div>
+            <p class="menu-card-desc">Moist, naturally sweet banana bread — a family recipe made gluten-free.</p>
+            <div class="menu-card-price">$14 / loaf</div>
+            <span class="tag">Gluten-Free</span>
+            <span class="tag">DF Option</span>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-card-img" style="padding: 0; overflow: hidden;">
+            <img src="Photos/placeholder_pumpkin_bread.jpg" alt="Gluten-free pumpkin bread" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-name">Pumpkin &amp; Seasonal Bread</div>
+            <p class="menu-card-desc">Warmly spiced pumpkin bread and rotating seasonal loaves.</p>
+            <div class="menu-card-price">$14 / loaf</div>
+            <span class="tag">Gluten-Free</span>
+            <span class="tag">Seasonal</span>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Sweets & Breakfast -->
+      <h3 class="menu-category">Sweets &amp; Breakfast</h3>
+      <div class="menu-grid">
+
+        <div class="menu-card">
+          <div class="menu-card-img" style="padding: 0; overflow: hidden;">
+            <img src="Photos/placeholder_muffins.jpg" alt="Gluten-free blueberry muffins" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-name">Muffins</div>
+            <p class="menu-card-desc">Bakery-style blueberry or banana muffins, baked fresh.</p>
+            <div class="menu-card-price">$22 half-dozen</div>
+            <span class="tag">Gluten-Free</span>
+            <span class="tag">DF Option</span>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-card-img" style="padding: 0; overflow: hidden;">
+            <img src="Photos/placeholder_brownies.jpg" alt="Gluten-free chocolate brownies" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-name">Brownies</div>
+            <p class="menu-card-desc">Rich, fudgy chocolate brownies. Sold by the box.</p>
+            <div class="menu-card-price">$20 box of 6</div>
+            <span class="tag">Gluten-Free</span>
+            <span class="tag">DF Option</span>
+          </div>
+        </div>
+
+        <div class="menu-card">
+          <div class="menu-card-img" style="padding: 0; overflow: hidden;">
+            <img src="Photos/placeholder_cupcakes.jpg" alt="Gluten-free cupcakes with buttercream" style="width: 100%; height: 100%; object-fit: cover; display: block;" />
+          </div>
+          <div class="menu-card-body">
+            <div class="menu-card-name">Cupcakes</div>
+            <p class="menu-card-desc">Moist, tender cupcakes with real buttercream — no artificial dyes. Sold by the half-dozen.</p>
+            <div class="menu-card-price">$24 half-dozen</div>
+            <span class="tag">Gluten-Free</span>
+            <span class="tag">Half-Dozen</span>
+          </div>
+        </div>
+
+      </div>
+
     </div>
   </section>
 
@@ -680,11 +936,10 @@
         </div>
 
         <div>
-          <div class="payment-card" style="padding: 0; overflow: hidden;">
-            <iframe src="baked_with_love_menu_framed_terracotta.pdf" style="width: 100%; height: 420px; border: none; display: block;" title="Baked with Love Menu"></iframe>
-            <div style="padding: 1.25rem 1.5rem; border-top: 1px solid var(--border);">
-              <a href="baked_with_love_menu_framed_terracotta.pdf" class="btn btn-primary" style="width: 100%; text-align: center; display: block;">View Full Menu</a>
-            </div>
+          <div class="payment-card" style="text-align: center;">
+            <div style="font-family: 'Josefin Sans', sans-serif; font-weight: 300; letter-spacing: 0.12em; text-transform: uppercase; color: var(--brown); font-size: 1rem; margin-bottom: 0.6rem;">Our Full Menu</div>
+            <p style="font-size: 1rem; color: var(--muted); line-height: 1.7; margin-bottom: 1.25rem;">Cookies, breads, sweets &amp; breakfast, and a whole lineup of healthy kids' treats — all gluten-free, made with organic ingredients.</p>
+            <a href="#menu" class="btn btn-primary" style="width: 100%; text-align: center; display: block;">View Full Menu &#8593;</a>
           </div>
           <p class="order-note">Payment is required at the time of order. Elizabeth confirms within 24 hours. Please allow 24–48 hours notice when placing your order.</p>
         </div>
